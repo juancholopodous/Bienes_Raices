@@ -2,23 +2,31 @@
     display: flex;
     flex-direction: column;
     padding-top: 3rem;
+    align-items: center;
+
+    img { /* Necesario para que el svg del Logo no sea 0x0 y se vea */
+        max-width: 100%;
+        width: 28rem;
+        height: auto;
+    }
 
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
-        img {
-            max-width: 100%;
-            width: 28rem;
-            height: auto;
-        }
     }
 }
 
 .navegacion {
+   /* display: none; La Desvilitamos cuando está el menú hamburguesa*/
+    visibility: hidden;
+    opacity: 0; /* 0% visible */
+    transition: visibility 0.3s ease-in-out, opacity 0.2s linear;
 
     @include tablet {
         display: flex;
         align-items: center;
+        opacity: 1;
+        visibility: visible;
     }
 
     a {
@@ -37,4 +45,28 @@
             }
         }
     }
+}
+
+/* MENÚ DE HAMBURGUESA */
+
+.mobile-menu {
+    @include tablet {
+        display: none;
+    }
+    img {
+        margin: 2rem 0;
+        width: 4rem;
+    }
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+    }
+}
+.mostrar {
+    visibility: visible;
+    opacity: 1; /* Opacidad al 100% */
 }
