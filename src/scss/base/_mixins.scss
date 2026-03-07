@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "sass:color";
+
 /** Media Queries **/
 @mixin telefono {
     @media (min-width: #{$telefono}) {
@@ -29,10 +32,10 @@
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
-    margin-top: $separacion / 2;
+    margin-top: math.div($separacion, 2);
     display: $display;
 
     &:hover {
-        background-color: darken($bgcolor, 5);
+        background-color: color.adjust($bgcolor, $lightness: -5%);
     }
 }
