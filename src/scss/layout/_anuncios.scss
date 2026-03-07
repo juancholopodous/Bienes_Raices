@@ -17,17 +17,19 @@
     h3, p {
         margin: 0;
     }
-    .precio {
+}
+
+.precio {
         color: $verde;
         font-weight: $bold;
         font-size: 3rem;
     }
-}
 
 .iconos-caracteristicas {
     display: flex;
     padding: 0;
     list-style: none;
+    max-width: 40rem;
 
     li {
         flex: 1;
