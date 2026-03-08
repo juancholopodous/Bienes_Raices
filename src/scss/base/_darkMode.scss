@@ -6,7 +6,8 @@
     p { color: $blanco; }
     a, h1, h2, h3, h4 { color: $gris; }
 
-    .anuncio {
+    .anuncio,
+    .resumen-propiedad {
         background-color: $grisOscuro;
         border: 1px solid $grisOscuro;
 
@@ -15,5 +16,20 @@
         .icono-p {
             filter: invert(100%);
         }
+    }
+    
+    .formulario {
+        p, label, legend { color: $gris; }
+
+        input:not([type="submit"]),
+        textarea, select {
+            background-color: $grisOscuro;
+            border: 1px solid $grisOscuro;
+            color: $blanco;
+        }
+    }
+    
+    .sobre-nosotros-texto blockquote {
+        color: $blanco;
     }
 }
