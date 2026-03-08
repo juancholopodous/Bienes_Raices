@@ -17,7 +17,6 @@
 }
 
 .navegacion {
-   /* display: none; La Desvilitamos cuando está el menú hamburguesa*/
     visibility: hidden;
     opacity: 0; /* 0% visible */
     transition: visibility 0.3s ease-in-out, opacity 0.2s linear;
